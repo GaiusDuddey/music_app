@@ -13,12 +13,12 @@ class AudioInfo3 extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         const Text(
-          'Spider Man',
+          'Song',
           style:
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),
         const SizedBox(height: 30),
-        const Text( 
+        const Text(
           'Music',
           style: TextStyle(fontSize: 30, color: Colors.black),
         ),
