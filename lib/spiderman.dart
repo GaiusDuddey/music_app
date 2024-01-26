@@ -71,7 +71,7 @@ class _HomeScreenState extends State<SpiderMan> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("go back")),
+                child: Text("")),
             const AudioInfo2(),
             const SizedBox(height: 50),
             Slider(

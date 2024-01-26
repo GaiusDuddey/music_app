@@ -1,16 +1,16 @@
-import 'package:music_app/audio_info.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:music_app/audio_info3.dart';
 import 'package:music_app/utils/utils.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Disc extends StatefulWidget {
+  const Disc({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Disc> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<Disc> {
   bool isPlaying = false;
   late final AudioPlayer player;
   late final AssetSource path;
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Link.mp3');
+    path = AssetSource('audio/Disfigure.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo(),
+            const AudioInfo3(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),

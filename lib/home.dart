@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/home_screen.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -40,6 +40,33 @@ class _HomeState extends State<Home> {
               },
               child: Text(
                 "Music Screen",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/fire");
+              },
+              child: Text(
+                "Fire",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/song");
+              },
+              child: Text(
+                "ITW",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/disc");
+              },
+              child: Text(
+                "Discfigure",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),

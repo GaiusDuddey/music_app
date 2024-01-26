@@ -31,7 +31,7 @@ class _HomeScreenState extends State<Song> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Spider.mp3');
+    path = AssetSource('audio/ITW.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<Song> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("go back")),
+                child: Text("")),
             const AudioInfo3(),
             const SizedBox(height: 50),
             Slider(
