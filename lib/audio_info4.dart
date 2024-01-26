@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AudioInfo3 extends StatelessWidget {
-  const AudioInfo3({super.key});
+class AudioInfo4 extends StatelessWidget {
+  const AudioInfo4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class AudioInfo3 extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         const Text(
-          'Song',
+          'Disc',
           style:
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),

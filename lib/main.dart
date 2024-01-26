@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/alone.dart';
 import 'package:music_app/disc.dart';
 import 'package:music_app/fire.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
+import 'package:music_app/ignite.dart';
 import 'package:music_app/spiderman.dart';
 import 'package:music_app/song.dart';
 
@@ -46,6 +48,8 @@ class MyApp extends StatelessWidget {
         "/song":(context) => Song(),
         "/disc":(context) => Disc(),
         "/fire":(context) => Fire(),
+        "/alone":(context) => Alone(),
+        "/ignite":(context) => Ignite(),
       },
       initialRoute: "/home",
     );

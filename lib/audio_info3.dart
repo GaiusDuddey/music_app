@@ -8,12 +8,12 @@ class AudioInfo3 extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'assets/images/Paint.png',
+          'assets/images/Night.png',
           width: 250,
         ),
         const SizedBox(height: 30),
         const Text(
-          'Song',
+          'Into The Wild',
           style:
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),

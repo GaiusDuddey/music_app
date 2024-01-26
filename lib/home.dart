@@ -45,6 +45,24 @@ class _HomeState extends State<Home> {
             ),
             TextButton(
               onPressed: () {
+                Navigator.pushNamed(context, "/alone");
+              },
+              child: Text(
+                "Alone",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/ignite");
+              },
+              child: Text(
+                "Ignite",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
                 Navigator.pushNamed(context, "/fire");
               },
               child: Text(

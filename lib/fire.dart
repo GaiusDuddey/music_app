@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/audio_info3.dart';
+import 'package:music_app/audio_info5.dart';
 import 'package:music_app/utils/utils.dart';
 
 class Fire extends StatefulWidget {
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<Fire> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo3(),
+            const AudioInfo5(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),
