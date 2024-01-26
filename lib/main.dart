@@ -5,8 +5,10 @@ import 'package:music_app/fire.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
 import 'package:music_app/ignite.dart';
+import 'package:music_app/signupscreen.dart';
 import 'package:music_app/spiderman.dart';
 import 'package:music_app/song.dart';
+import 'loginscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +42,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const SignUpScreen(),
       routes: {
+        "/signupscreen":(context) => SignUpScreen(),
+        "/loginscreen":(context)=> LoginScreen(),
         "/home_screen":(context) => HomeScreen(),
         "/home":(context) => Home(),
         "/spiderman":(context) => SpiderMan(),
@@ -51,7 +55,7 @@ class MyApp extends StatelessWidget {
         "/alone":(context) => Alone(),
         "/ignite":(context) => Ignite(),
       },
-      initialRoute: "/home",
+      initialRoute: "/signupscreen",
     );
   }
 }
