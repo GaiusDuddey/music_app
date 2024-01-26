@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                 Navigator.pushNamed(context, "/home_screen");
               },
               child: Text(
-                "Music Screen",
+                "NCS",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
