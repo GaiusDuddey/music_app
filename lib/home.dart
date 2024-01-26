@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -23,6 +22,12 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/Eternity.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
