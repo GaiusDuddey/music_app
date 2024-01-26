@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 height: screenHeight / 2,
                 width: screenWidth,
-                color: Colors.black,
+                color: Colors.grey,
                 padding: EdgeInsets.symmetric(
                   horizontal: screenWidth / 12,
                 ),
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             bottom: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.black54,
+                            color: Colors.black,
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: const Center(
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               "Don't have an account? Create one",
                               style: TextStyle(
                                 fontFamily: "Montserrat",
-                                color: Colors.black54,
+                                color: Colors.black,
                                 fontSize: 12,
                               ),
                             ),

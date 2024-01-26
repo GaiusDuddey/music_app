@@ -147,7 +147,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           prefixIcon: Icon(
             icon,
-            color: Colors.blue,
+            color: Colors.black26,
           ),
           contentPadding: const EdgeInsets.only(
             top: 14,

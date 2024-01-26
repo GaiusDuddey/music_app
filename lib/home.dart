@@ -57,12 +57,39 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
+             TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/boys");
+              },
+              child: Text(
+                "The Boys",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/ignite");
               },
               child: Text(
                 "Ignite",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/believer");
+              },
+              child: Text(
+                "Believer",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/pirates");
+              },
+              child: Text(
+                "Pirates",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),

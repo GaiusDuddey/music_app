@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class AudioInfo4 extends StatelessWidget {
-  const AudioInfo4({super.key});
+class AudioInfo8 extends StatelessWidget {
+  const AudioInfo8({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Image.asset(
-          'assets/images/Light.png',
+          'assets/images/Paint.png',
           width: 250,
         ),
         const SizedBox(height: 30),
         const Text(
-          'Disc',
+          'The Boys',
           style:
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),
