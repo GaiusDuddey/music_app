@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'loginscreen.dart';
+import 'package:music_app/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -65,53 +65,61 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         textField("Confirm Password", Icons.lock_outlined, true),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          width: screenWidth,
-                          height: 50,
-                          margin: const EdgeInsets.only(
-                            bottom: 4,
+                    Container(
+                      width: screenWidth,
+                      height: 50,
+                      margin: const EdgeInsets.only(
+                        bottom: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.black54,
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          // Placeholder for sign-up logic
+                          performSignUp();
+                          // Navigate to the home screen after successful sign-up
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => HomeScreen(),
+                            ),
+                          );
+                        },
+                        child: const Center(
+                          child: Text(
+                            "SIGN UP",
+                            style: TextStyle(
+                              fontFamily: "Montserrat",
+                              color: Colors.white,
+                              letterSpacing: 1.5,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
-                          decoration: BoxDecoration(
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        bottom: 30,
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          "Already have an account? Login",
+                          style: TextStyle(
+                            fontFamily: "Montserrat",
                             color: Colors.black54,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "SIGN UP",
-                              style: TextStyle(
-                                fontFamily: "Montserrat",
-                                color: Colors.white,
-                                letterSpacing: 1.5,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
+                            fontSize: 12,
                           ),
                         ),
-                        Container(
-                          margin: const EdgeInsets.only(
-                            bottom: 30,
-                          ),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => const LoginScreen(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              "Already have an account? Login",
-                              style: TextStyle(
-                                fontFamily: "Montserrat",
-                                color: Colors.black54,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ],
                 ),
@@ -175,4 +183,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
+  // Placeholder for sign-up logic
+  void performSignUp() {
+    // Implement your sign-up logic here
+    // This is where you might call an API to register the user, validate the form, etc.
+  }
 }
