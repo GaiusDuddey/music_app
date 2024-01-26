@@ -61,7 +61,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         textField("Username", Icons.person_outline, false),
                         textField("Email", Icons.email_outlined, false),
                         textField("Password", Icons.lock_outlined, true),
-                        textField("Confirm Password", Icons.lock_outlined, true),
+                        textField(
+                            "Confirm Password", Icons.lock_outlined, true),
                       ],
                     ),
                     Column(
@@ -146,7 +147,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           prefixIcon: Icon(
             icon,
-            color: Colors.black26,
+            color: Colors.blue,
           ),
           contentPadding: const EdgeInsets.only(
             top: 14,
@@ -173,5 +174,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ),
     );
   }
-
 }
