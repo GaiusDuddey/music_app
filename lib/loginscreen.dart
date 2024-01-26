@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 height: screenHeight / 2,
                 width: screenWidth,
-                color: Colors.black,
+                color: Colors.black38,
                 padding: EdgeInsets.symmetric(
                   horizontal: screenWidth / 12,
                 ),
