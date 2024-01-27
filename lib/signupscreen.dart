@@ -31,14 +31,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 padding: EdgeInsets.only(
                   top: screenHeight / 8,
                 ),
-                child: Text(
-                  "SIGN UP",
-                  style: TextStyle(
-                    fontFamily: "Montserrat",
-                    fontSize: screenWidth / 10,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      "icons/musicicon.png",
+                      width: 80,
+                      height: 80,
+                    ),
+                    Text(
+                      "SIGN UP",
+                      style: TextStyle(
+                        fontFamily: "Montserrat",
+                        fontSize: screenWidth / 10,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -60,7 +69,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Column(
                       children: [
                         textField("Username", Icons.person_outline, false),
-                        textField("Email", Icons.email_outlined, false,),
+                        textField("Email", Icons.email_outlined, false),
                         textField("Password", Icons.lock_outlined, true),
                         textField("Confirm Password", Icons.lock_outlined, true),
                       ],
@@ -121,6 +130,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                     ),
+                    // Add your small difference here (if any)
                   ],
                 ),
               ),

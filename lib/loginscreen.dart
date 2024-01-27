@@ -8,6 +8,7 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
+
 class _LoginScreenState extends State<LoginScreen> {
   double screenHeight = 0;
   double screenWidth = 0;
@@ -30,14 +31,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: EdgeInsets.only(
                   top: screenHeight / 8,
                 ),
-                child: Text(
-                  "LOGIN",
-                  style: TextStyle(
-                    fontFamily: "Montserrat",
-                    fontSize: screenWidth / 10,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      "icons/musicicon.png",
+                      width: 80,
+                      height: 80,
+                    ),
+                    Text(
+                      "LOGIN",
+                      style: TextStyle(
+                        fontFamily: "Montserrat",
+                        fontSize: screenWidth / 10,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -49,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 height: screenHeight / 2,
                 width: screenWidth,
-                color: Colors.grey,
+                color: Colors.grey, // Adjusted color
                 padding: EdgeInsets.symmetric(
                   horizontal: screenWidth / 12,
                 ),
@@ -68,23 +78,25 @@ class _LoginScreenState extends State<LoginScreen> {
                           margin: const EdgeInsets.only(
                             bottom: 4,
                           ),
-                          child : GestureDetector(
-                            onTap: (){
+                          child: GestureDetector(
+                            onTap: () {
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                   builder: (context) => const HomeScreen(),
                                 ),
                               );
                             },
-
-                          child: const Center(
-                            child: Text(
-                              "SIGN UP",
-                              style: TextStyle(fontFamily: "Montserrat", color: Colors.white, letterSpacing: 1.5,
-                                fontWeight: FontWeight.w700,
+                            child: const Center(
+                              child: Text(
+                                "LOGIN",
+                                style: TextStyle(
+                                  fontFamily: "Montserrat",
+                                  color: Colors.white,
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
                             ),
-                          ),
                           ),
                         ),
                         Container(
@@ -164,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Container(
             height: screenHeight / 3,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(opacity),
+              color: Colors.grey.withOpacity(opacity), // Adjusted color
               borderRadius: BorderRadius.circular(55),
             ),
           ),
