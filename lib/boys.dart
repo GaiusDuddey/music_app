@@ -1,16 +1,16 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/audio_info6.dart';
+import 'package:music_app/audio_info8.dart';
 import 'package:music_app/utils/utils.dart';
 
-class Ignite extends StatefulWidget {
-  const Ignite({super.key});
+class Boys extends StatefulWidget {
+  const Boys({super.key});
 
   @override
-  State<Ignite> createState() => _HomeScreenState();
+  State<Boys> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<Ignite> {
+class _HomeScreenState extends State<Boys> {
   bool isPlaying = false;
   late final AudioPlayer player;
   late final AssetSource path;
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<Ignite> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Ignite.mp3');
+    path = AssetSource('audio/Boys.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<Ignite> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo6(),
+            const AudioInfo8(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),

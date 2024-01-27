@@ -61,8 +61,14 @@ class _HomeScreenState extends State<SpiderMan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: Container(
         padding: const EdgeInsets.all(16.0),
+         decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/Cosmic.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
