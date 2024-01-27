@@ -63,7 +63,7 @@ class _HomeScreenState extends State<SpiderMan> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(16.0),
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Cosmic.png"),
             fit: BoxFit.cover,
@@ -106,13 +106,15 @@ class _HomeScreenState extends State<SpiderMan> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/rewind.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_previous,
+                    size: 40,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(
+                  height: 20,
+                  width: 20,
+                ),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
@@ -127,10 +129,9 @@ class _HomeScreenState extends State<SpiderMan> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/forward.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_next,
+                    size: 40,
                   ),
                 ),
               ],

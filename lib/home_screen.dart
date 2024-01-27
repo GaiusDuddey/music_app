@@ -106,11 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/rewind.png',
-                    height: 40,
-                    width: 40,
-                  ),
+                  child: Icon(Icons.skip_previous),
                 ),
                 const SizedBox(height: 20),
                 InkWell(
@@ -127,11 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/forward.png',
-                    height: 40,
-                    width: 40,
-                  ),
+                  child: Icon(Icons.skip_next),
                 ),
               ],
             ),
