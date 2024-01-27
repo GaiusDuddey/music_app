@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/images/Logo.png",
+              "assets/icons/musicicon.png",
               width: 150,
               height: 150,
             ),
