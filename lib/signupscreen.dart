@@ -12,7 +12,6 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   double screenHeight = 0;
   double screenWidth = 0;
-
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
@@ -77,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottom: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.black54,
+                            color: Colors.black,
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: GestureDetector(
@@ -132,7 +131,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-                  ),
+            ),
           ),
         ),
     );

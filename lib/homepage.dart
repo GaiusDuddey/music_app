@@ -142,7 +142,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Paint.png'),
+                            image: AssetImage('assets/images/Thunder.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -163,7 +163,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Paint.png'),
+                            image: AssetImage('assets/images/Alone.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -205,7 +205,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Paint.png'),
+                            image: AssetImage('assets/images/Boys.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -266,7 +266,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Cool.png'),
+                            image: AssetImage('assets/images/Space.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -308,7 +308,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Eternity.png'),
+                            image: AssetImage('assets/images/Night.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -329,7 +329,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Paint.png'),
+                            image: AssetImage('assets/images/SpiderMan.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -341,7 +341,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/spiderman");
+                        Navigator.pushNamed(context, "/disc");
                       },
                       child: Container(
                         height: 120,
@@ -350,7 +350,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Paint.png'),
+                            image: AssetImage('assets/images/Light.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
