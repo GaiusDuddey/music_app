@@ -73,6 +73,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               margin: const EdgeInsets.only(
                                 bottom: 4,
                               ),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
                               child : GestureDetector(
                                 onTap: (){
                                   Navigator.of(context).pushReplacement(
