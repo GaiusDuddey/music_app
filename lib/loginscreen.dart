@@ -82,12 +82,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   );
                                 },
           
-                              child: const Center(
-                                child: Text(
+                              child: Center(
+                                child: TextButton(onPressed: () {
+                                  Navigator.pushNamed(context, "/home_page");
+                                }, child: 
+                                Text(
                                   "LOGIN",
                                   style: TextStyle(fontFamily: "Montserrat", color: Colors.white, letterSpacing: 1.5,
                                     fontWeight: FontWeight.w700,
                                   ),
+                                ),
                                 ),
                               ),
                               ),
