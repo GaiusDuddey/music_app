@@ -2,6 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/audio_info10.dart';
 import 'package:music_app/utils/utils.dart';
+import 'package:shake/shake.dart';
 
 class Pirates extends StatefulWidget {
   const Pirates({super.key});
@@ -21,6 +22,10 @@ class _HomeScreenState extends State<Pirates> {
   void initState() {
     initPlayer();
     super.initState();
+    ShakeDetector.autoStart(onPhoneShake: () {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, "/song");
+    });
   }
 
   @override
@@ -106,9 +111,15 @@ class _HomeScreenState extends State<Pirates> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Icon(
-                    Icons.skip_previous,
-                    size: 40,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/ignite");
+                    },
+                    child: Icon(
+                      Icons.skip_previous,
+                      size: 40,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20, width: 20),
@@ -126,9 +137,15 @@ class _HomeScreenState extends State<Pirates> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Icon(
-                    Icons.skip_next,
-                    size: 40,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/song");
+                    },
+                    child: Icon(
+                      Icons.skip_next,
+                      size: 40,
+                    ),
                   ),
                 ),
               ],

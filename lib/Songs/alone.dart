@@ -2,6 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/audio_info7.dart';
 import 'package:music_app/utils/utils.dart';
+import 'package:shake/shake.dart';
 
 class Alone extends StatefulWidget {
   const Alone({super.key});
@@ -21,6 +22,10 @@ class _HomeScreenState extends State<Alone> {
   void initState() {
     initPlayer();
     super.initState();
+    ShakeDetector.autoStart(onPhoneShake: () {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, "/believer");
+    });
   }
 
   @override
@@ -126,9 +131,15 @@ class _HomeScreenState extends State<Alone> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Icon(
-                    Icons.skip_next,
-                    size: 40,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/believer");
+                    },
+                    child: Icon(
+                      Icons.skip_next,
+                      size: 40,
+                    ),
                   ),
                 ),
               ],
