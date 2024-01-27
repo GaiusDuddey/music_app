@@ -31,7 +31,7 @@ class _HomeScreenState extends State<Pirates> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/ITW.mp3');
+    path = AssetSource('audio/Pirates.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
