@@ -8,7 +8,7 @@ class AudioInfo9 extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'assets/images/Paint.png',
+          'assets/images/Thunder.png',
           width: 250,
         ),
         const SizedBox(height: 30),
