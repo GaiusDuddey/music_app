@@ -7,10 +7,10 @@ class AudioInfo2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/SpiderMan.png',
-          width: 250,
-        ),
+          Image.asset(
+            'assets/images/SpiderMan.png',
+            width: 250,
+          ),
         const SizedBox(height: 30),
         const Text(
           'Spider Man',
@@ -18,7 +18,7 @@ class AudioInfo2 extends StatelessWidget {
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),
         const SizedBox(height: 30),
-        const Text( 
+        const Text(
           'Music',
           style: TextStyle(fontSize: 30, color: Colors.black),
         ),

@@ -50,6 +50,12 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.amber,
                   height: 150,
                   width: 150,
+                  child: const Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/Imagine.png'),
+                    width: 100.0,
+                    height: 100.0,
+                  ),
                 )
               ],
             ),
@@ -63,6 +69,12 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.amber,
                   height: 150,
                   width: 150,
+                  child: const Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/Gases.png'),
+                    width: 100.0,
+                    height: 100.0,
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -71,6 +83,12 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.amber,
                   height: 150,
                   width: 150,
+                  child: const Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/Wolf.png'),
+                    width: 100.0,
+                    height: 100.0,
+                  ),
                 ),
               ],
             ),

@@ -7,10 +7,10 @@ class AudioInfo3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/Night.png',
-          width: 250,
-        ),
+          Image.asset(
+            'assets/images/Night.png',
+            width: 250,
+          ),
         const SizedBox(height: 30),
         const Text(
           'Into The Wild',
