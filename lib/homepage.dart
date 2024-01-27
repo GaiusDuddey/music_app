@@ -33,9 +33,14 @@ class _HomepageState extends State<Homepage> {
                     Navigator.pushNamed(context, "/home");
                   },
                   child: Container(
-                    color: Colors.amber,
                     height: 150,
                     width: 150,
+                    child: const Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage('assets/images/Paint.png'),
+                      width: 100.0,
+                      height: 100.0,
+                    ),
                   ),
                 ),
                 SizedBox(

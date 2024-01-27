@@ -1,16 +1,16 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/audio_info5.dart';
+import 'package:music_app/audio_info9.dart';
 import 'package:music_app/utils/utils.dart';
 
-class Fire extends StatefulWidget {
-  const Fire({super.key});
+class Believer extends StatefulWidget {
+  const Believer({super.key});
 
   @override
-  State<Fire> createState() => _HomeScreenState();
+  State<Believer> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<Fire> {
+class _HomeScreenState extends State<Believer> {
   bool isPlaying = false;
   late final AudioPlayer player;
   late final AssetSource path;
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<Fire> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Firefly.mp3');
+    path = AssetSource('audio/Believer.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<Fire> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(16.0),
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Cosmic.png"),
             fit: BoxFit.cover,
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<Fire> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo5(),
+            const AudioInfo9(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),
@@ -106,13 +106,12 @@ class _HomeScreenState extends State<Fire> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/rewind.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_previous,
+                    size: 40,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 20, width: 20),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
@@ -127,10 +126,9 @@ class _HomeScreenState extends State<Fire> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/forward.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_next,
+                    size: 40,
                   ),
                 ),
               ],

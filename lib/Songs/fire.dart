@@ -1,16 +1,16 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/audio_info8.dart';
+import 'package:music_app/audio_info5.dart';
 import 'package:music_app/utils/utils.dart';
 
-class Boys extends StatefulWidget {
-  const Boys({super.key});
+class Fire extends StatefulWidget {
+  const Fire({super.key});
 
   @override
-  State<Boys> createState() => _HomeScreenState();
+  State<Fire> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<Boys> {
+class _HomeScreenState extends State<Fire> {
   bool isPlaying = false;
   late final AudioPlayer player;
   late final AssetSource path;
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<Boys> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Boys.mp3');
+    path = AssetSource('audio/Firefly.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<Boys> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(16.0),
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Cosmic.png"),
             fit: BoxFit.cover,
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<Boys> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo8(),
+            const AudioInfo5(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),
@@ -106,13 +106,12 @@ class _HomeScreenState extends State<Boys> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/rewind.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_previous,
+                    size: 40,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 20, width: 20),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
@@ -127,10 +126,9 @@ class _HomeScreenState extends State<Boys> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset(
-                    'assets/icons/forward.png',
-                    height: 40,
-                    width: 40,
+                  child: Icon(
+                    Icons.skip_next,
+                    size: 40,
                   ),
                 ),
               ],
