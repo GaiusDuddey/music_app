@@ -28,10 +28,15 @@ class _HomepageState extends State<Homepage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  color: Colors.amber,
-                  height: 150,
-                  width: 180,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/home");
+                  },
+                  child: Container(
+                    color: Colors.amber,
+                    height: 150,
+                    width: 150,
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -39,8 +44,8 @@ class _HomepageState extends State<Homepage> {
                 Container(
                   color: Colors.amber,
                   height: 150,
-                  width: 180,
-                ),
+                  width: 150,
+                )
               ],
             ),
             SizedBox(
@@ -52,7 +57,7 @@ class _HomepageState extends State<Homepage> {
                 Container(
                   color: Colors.amber,
                   height: 150,
-                  width: 180,
+                  width: 150,
                 ),
                 SizedBox(
                   width: 10,
@@ -60,7 +65,7 @@ class _HomepageState extends State<Homepage> {
                 Container(
                   color: Colors.amber,
                   height: 150,
-                  width: 180,
+                  width: 150,
                 ),
               ],
             ),
@@ -70,17 +75,21 @@ class _HomepageState extends State<Homepage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                   SizedBox(
-              width: 10,
-            ),
+                SizedBox(
+                  width: 10,
+                ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
-                  // color: Colors.amber,
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.amber),
                   height: 45,
-                  width: 180,
+                  width: 150,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Playlist",
+                    style: TextStyle(color: Colors.black),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ],
             ),
@@ -96,57 +105,107 @@ class _HomepageState extends State<Homepage> {
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/spiderman");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/SpiderMan.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/believer");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Paint.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/alone");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Paint.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/fire");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Winter.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/boys");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Paint.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
@@ -161,16 +220,21 @@ class _HomepageState extends State<Homepage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                         SizedBox(
-              width: 10,
-            ),
+                SizedBox(
+                  width: 10,
+                ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.amber),
                   height: 45,
-                  width: 180,
+                  width: 150,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Playlist",
+                    style: TextStyle(color: Colors.black),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ],
             ),
@@ -186,57 +250,107 @@ class _HomepageState extends State<Homepage> {
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/ignite");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Cool.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/pirates");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Pirates.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/song");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Eternity.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/spiderman");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Paint.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/spiderman");
+                      },
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: const Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/Paint.png'),
+                            width: 100.0,
+                            height: 100.0,
+                          ),
+                        ),
                       ),
-                      height: 120,
-                      width: 120,
                     ),
                     SizedBox(
                       width: 10,
@@ -249,8 +363,8 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.shifting,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.shifting,
           onTap: (index) {
             setState(() {
               myIndex = index;

@@ -6,6 +6,7 @@ import 'package:music_app/disc.dart';
 import 'package:music_app/fire.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
+import 'package:music_app/homepage.dart';
 import 'package:music_app/ignite.dart';
 import 'package:music_app/pirates.dart';
 import 'package:music_app/signupscreen.dart';
@@ -60,8 +61,9 @@ class MyApp extends StatelessWidget {
         "/boys": (context) => Boys(),
         "/believer": (context) => Believer(),
         "/pirates": (context) => Pirates(),
+        "/homepage": (context) => Homepage(),
       },
-      initialRoute: "/home",
+      initialRoute: "/homepage",
     );
   }
 }
