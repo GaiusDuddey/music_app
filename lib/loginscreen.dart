@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/signupscreen.dart';
+import 'package:music_app/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -7,7 +8,6 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-
 class _LoginScreenState extends State<LoginScreen> {
   double screenHeight = 0;
   double screenWidth = 0;
@@ -65,25 +65,26 @@ class _LoginScreenState extends State<LoginScreen> {
                     Column(
                       children: [
                         Container(
-                          width: screenWidth,
-                          height: 50,
                           margin: const EdgeInsets.only(
                             bottom: 4,
                           ),
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
+                          child : GestureDetector(
+                            onTap: (){
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => const HomeScreen(),
+                                ),
+                              );
+                            },
+
                           child: const Center(
                             child: Text(
                               "SIGN UP",
-                              style: TextStyle(
-                                fontFamily: "Montserrat",
-                                color: Colors.white,
-                                letterSpacing: 1.5,
+                              style: TextStyle(fontFamily: "Montserrat", color: Colors.white, letterSpacing: 1.5,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
+                          ),
                           ),
                         ),
                         Container(

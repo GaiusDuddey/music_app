@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/Songs/alone.dart';
-import 'package:music_app/Songs/believer.dart';
-import 'package:music_app/Songs/boys.dart';
-import 'package:music_app/Songs/disc.dart';
-import 'package:music_app/Songs/fire.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
-import 'package:music_app/homepage.dart';
-import 'package:music_app/Songs/ignite.dart';
-import 'package:music_app/Songs/pirates.dart';
 import 'package:music_app/signupscreen.dart';
-import 'package:music_app/Songs/spiderman.dart';
-import 'package:music_app/Songs/song.dart';
 import 'loginscreen.dart';
 
 void main() {
@@ -52,18 +42,8 @@ class MyApp extends StatelessWidget {
         "/loginscreen": (context) => LoginScreen(),
         "/home_screen": (context) => HomeScreen(),
         "/home": (context) => Home(),
-        "/spiderman": (context) => SpiderMan(),
-        "/song": (context) => Song(),
-        "/disc": (context) => Disc(),
-        "/fire": (context) => Fire(),
-        "/alone": (context) => Alone(),
-        "/ignite": (context) => Ignite(),
-        "/boys": (context) => Boys(),
-        "/believer": (context) => Believer(),
-        "/pirates": (context) => Pirates(),
-        "/homepage": (context) => Homepage(),
       },
-      initialRoute: "/homepage",
+      initialRoute: "/home",
     );
   }
 }
