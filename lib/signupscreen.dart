@@ -19,26 +19,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
     screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.black54,
-      body: SizedBox(
-        height: screenHeight,
-        width: screenWidth,
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.topCenter,
-              child: Padding(
-                padding: EdgeInsets.only(
-                  top: screenHeight / 8,
-                ),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "icons/musicicon.png",
-                      width: 80,
-                      height: 80,
+        backgroundColor: Colors.black54,
+        body: SingleChildScrollView(
+          child: Container(
+            child: SizedBox(
+            height: screenHeight,
+            width: screenWidth,
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: screenHeight / 8,
                     ),
-                    Text(
+                    // child:Image.asset(
+                    //     "icons/musicicon.png"
+                    // );
+                    child: Text(
                       "SIGN UP",
                       style: TextStyle(
                         fontFamily: "Montserrat",
@@ -47,97 +45,96 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: Colors.white,
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
-            square(-30, 0.12),
-            square(-10, 0.3),
-            square(10, 1),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: screenHeight / 2,
-                width: screenWidth,
-                color: Colors.white,
-                padding: EdgeInsets.symmetric(
-                  horizontal: screenWidth / 12,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
+                square(-30, 0.12),
+                square(-10, 0.3),
+                square(10, 1),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    height: screenHeight / 2,
+                    width: screenWidth,
+                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: screenWidth / 12,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        textField("Username", Icons.person_outline, false),
-                        textField("Email", Icons.email_outlined, false),
-                        textField("Password", Icons.lock_outlined, true),
-                        textField("Confirm Password", Icons.lock_outlined, true),
+                        Column(
+                          children: [
+                            textField("Username", Icons.person_outline, false),
+                            textField("Email", Icons.email_outlined, false,),
+                            textField("Password", Icons.lock_outlined, true),
+                            textField("Confirm Password", Icons.lock_outlined, true),
+                          ],
+                        ),
+                        Container(
+                          width: screenWidth,
+                          height: 50,
+                          margin: const EdgeInsets.only(
+                            bottom: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.black54,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
+                              // Placeholder for sign-up logic
+                              performSignUp();
+                              // Navigate to the home screen after successful sign-up
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
+                            },
+                            child: const Center(
+                              child: Text(
+                                "SIGN UP",
+                                style: TextStyle(
+                                  fontFamily: "Montserrat",
+                                  color: Colors.white,
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(
+                            bottom: 30,
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => const LoginScreen(),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              "Already have an account? Login",
+                              style: TextStyle(
+                                fontFamily: "Montserrat",
+                                color: Colors.black54,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
-                    Container(
-                      width: screenWidth,
-                      height: 50,
-                      margin: const EdgeInsets.only(
-                        bottom: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.black54,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: GestureDetector(
-                        onTap: () {
-                          // Placeholder for sign-up logic
-                          performSignUp();
-                          // Navigate to the home screen after successful sign-up
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
-                            ),
-                          );
-                        },
-                        child: const Center(
-                          child: Text(
-                            "SIGN UP",
-                            style: TextStyle(
-                              fontFamily: "Montserrat",
-                              color: Colors.white,
-                              letterSpacing: 1.5,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(
-                        bottom: 30,
-                      ),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => const LoginScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          "Already have an account? Login",
-                          style: TextStyle(
-                            fontFamily: "Montserrat",
-                            color: Colors.black54,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Add your small difference here (if any)
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+                  ),
+          ),
         ),
-      ),
     );
   }
 

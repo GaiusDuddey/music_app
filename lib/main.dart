@@ -36,14 +36,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: const SignUpScreen(),
       routes: {
         "/signupscreen": (context) => SignUpScreen(),
         "/loginscreen": (context) => LoginScreen(),
         "/home_screen": (context) => HomeScreen(),
         "/home": (context) => Home(),
       },
-      initialRoute: "/home",
+      initialRoute:"/signupscreen",
     );
   }
 }
