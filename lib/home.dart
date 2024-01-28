@@ -21,7 +21,9 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      body: Container(
+      body: new SingleChildScrollView(
+      child: SingleChildScrollView(
+      child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Eternity.png"),
@@ -140,6 +142,8 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
+      ),
+      ),
       ),
     );
   }
