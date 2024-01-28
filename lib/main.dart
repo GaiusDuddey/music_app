@@ -5,6 +5,7 @@ import 'package:music_app/Songs/boys.dart';
 import 'package:music_app/Songs/disc.dart';
 import 'package:music_app/Songs/fire.dart';
 import 'package:music_app/Songs/ignite.dart';
+import 'package:music_app/Songs/mic.dart';
 import 'package:music_app/Songs/pirates.dart';
 import 'package:music_app/Songs/song.dart';
 import 'package:music_app/Songs/spiderman.dart';
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
         "/pirates": (context) => Pirates(),
         "/song": (context) => Song(),
         "/spiderman": (context) => SpiderMan(),
+        "/mic": (context) => Mic(),
       },
       initialRoute:"/loginscreen",
     );

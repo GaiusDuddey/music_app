@@ -122,6 +122,15 @@ class _HomeState extends State<Home> {
             ),
             TextButton(
               onPressed: () {
+                Navigator.pushNamed(context, "/mic");
+              },
+              child: Text(
+                "Mic Drop",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
                 Navigator.pushNamed(context, "/spiderman");
               },
               child: Text(
