@@ -13,7 +13,7 @@ class AudioInfo11 extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         const Text(
-          'Believer',
+          'Mic Drop',
           style:
               TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
         ),

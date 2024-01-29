@@ -128,7 +128,7 @@ class _HomeScreenState extends State<SpiderMan> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset('assets/icons/rewind.png'),
+                  child: Image.asset('assets/icons/rewind.png', height: 40, width: 40,),
                 ),
                 const SizedBox(height: 20),
                 InkWell(
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<SpiderMan> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset('assets/icons/forward.png'),
+                  child: Image.asset('assets/icons/forward.png', height: 40, width: 40,),
                 ),
                 const SizedBox(width: 20),
                 InkWell(
