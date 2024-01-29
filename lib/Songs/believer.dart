@@ -123,6 +123,14 @@ class _HomeScreenState extends State<Believer> {
                   ),
                 ),
                 const SizedBox(height: 20, width: 20),
+                 InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds - 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/rewind.png'),
+                ),
+                const SizedBox(height: 20),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
@@ -130,6 +138,14 @@ class _HomeScreenState extends State<Believer> {
                     color: Colors.black,
                     size: 60,
                   ),
+                ),
+                const SizedBox(width: 20),
+                 InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds + 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/forward.png'),
                 ),
                 const SizedBox(width: 20),
                 InkWell(

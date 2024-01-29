@@ -116,6 +116,14 @@ class _HomeScreenState extends State<Alone> {
                     size: 40,
                   ),
                 ),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds - 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/rewind.png'),
+                ),
+                const SizedBox(height: 20),
                 const SizedBox(height: 20, width: 20),
                 InkWell(
                   onTap: playPause,
@@ -124,6 +132,14 @@ class _HomeScreenState extends State<Alone> {
                     color: Colors.black,
                     size: 60,
                   ),
+                ),
+                const SizedBox(width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds + 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/forward.png'),
                 ),
                 const SizedBox(width: 20),
                 InkWell(
