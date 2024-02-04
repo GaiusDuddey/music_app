@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      body: new SingleChildScrollView(
+      body: Scrollbar(
       child: SingleChildScrollView(
       child: Container(
         decoration: BoxDecoration(
