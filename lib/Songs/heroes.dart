@@ -114,7 +114,7 @@ class _HomeScreenState extends State<Heroes> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/home_screen");
+                      Navigator.pushNamed(context, "/song");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<Heroes> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/pirates");
+                      Navigator.pushNamed(context, "/coffin");
                     },
                     child: Icon(
                       Icons.skip_next,

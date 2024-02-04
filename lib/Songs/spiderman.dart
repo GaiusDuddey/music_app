@@ -114,7 +114,7 @@ class _HomeScreenState extends State<SpiderMan> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/song");
+                      Navigator.pushNamed(context, "/disc");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<SpiderMan> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/alone");
+                      Navigator.pushNamed(context, "/home_screen");
                     },
                     child: Icon(
                       Icons.skip_next,

@@ -114,7 +114,7 @@ class _HomeScreenState extends State<Ignite> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/fire");
+                      Navigator.pushNamed(context, "/boys");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<Ignite> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/pirates");
+                      Navigator.pushNamed(context, "/believer");
                     },
                     child: Icon(
                       Icons.skip_next,

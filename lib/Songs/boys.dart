@@ -114,7 +114,7 @@ class _HomeScreenState extends State<Boys> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/believer");
+                      Navigator.pushNamed(context, "/alone");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<Boys> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/disc");
+                      Navigator.pushNamed(context, "/ignite");
                     },
                     child: Icon(
                       Icons.skip_next,

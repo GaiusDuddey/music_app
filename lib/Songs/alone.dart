@@ -111,11 +111,18 @@ class _HomeScreenState extends State<Alone> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/home_screen");
+                    },
                   child: Icon(
                     Icons.skip_previous,
                     size: 40,
                   ),
                 ),
+                ),
+                 const SizedBox(height: 20, width: 20),
                 InkWell(
                   onTap: () {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
@@ -150,7 +157,7 @@ class _HomeScreenState extends State<Alone> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/believer");
+                      Navigator.pushNamed(context, "/boys");
                     },
                     child: Icon(
                       Icons.skip_next,
