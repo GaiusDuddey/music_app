@@ -114,7 +114,7 @@ class _HomeScreenState extends State<Mic> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/ignite");
+                      Navigator.pushNamed(context, "/disc");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<Mic> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/song");
+                      Navigator.pushNamed(context, "/spiderman");
                     },
                     child: Icon(
                       Icons.skip_next,

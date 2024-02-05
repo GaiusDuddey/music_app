@@ -156,7 +156,7 @@ class _HomeScreenState extends State<Disc> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/spiderman");
+                      Navigator.pushNamed(context, "/mic");
                     },
                     child: Icon(
                       Icons.skip_next,
