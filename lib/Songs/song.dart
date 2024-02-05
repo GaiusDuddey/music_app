@@ -23,8 +23,8 @@ class _HomeScreenState extends State<Song> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/boys");
+      Navigator.pop(context, "/fire");
+      Navigator.pushNamed(context, "/heroes");
     });
   }
 

@@ -2,6 +2,7 @@ import 'package:music_app/audio_info.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/utils/utils.dart';
+import 'package:shake/shake.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,6 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     initPlayer();
     super.initState();
+    ShakeDetector.autoStart(onPhoneShake: () {
+      Navigator.pop(context, "/spiderman");
+      Navigator.pushNamed(context, "/alone");
+    });
   }
 
   @override

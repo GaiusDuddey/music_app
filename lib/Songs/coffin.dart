@@ -23,8 +23,8 @@ class _HomeScreenState extends State<Coffin> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/boys");
+      Navigator.pop(context, "/heroes");
+      Navigator.pushNamed(context, "/rat");
     });
   }
 

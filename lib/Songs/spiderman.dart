@@ -23,8 +23,8 @@ class _HomeScreenState extends State<SpiderMan> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/alone");
+      Navigator.pop(context, "/mic");
+      Navigator.pushNamed(context, "/home_screen");
     });
   }
 
