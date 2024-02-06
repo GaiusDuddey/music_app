@@ -25,7 +25,8 @@ class _HomeScreenState extends State<Ignite> {
     ShakeDetector.autoStart(onPhoneShake: () {
       Navigator.pop(context, "/boys");
       Navigator.pushNamed(context, "/believer");
-    });
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override

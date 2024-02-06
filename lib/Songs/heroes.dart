@@ -25,7 +25,8 @@ class _HomeScreenState extends State<Heroes> {
     ShakeDetector.autoStart(onPhoneShake: () {
       Navigator.pop(context, "/song");
       Navigator.pushNamed(context, "/coffin");
-    });
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override

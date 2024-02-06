@@ -25,7 +25,8 @@ class _HomeScreenState extends State<Pirates> {
     ShakeDetector.autoStart(onPhoneShake: () {
       Navigator.pop(context, "/believer");
       Navigator.pushNamed(context, "/fire");
-    });
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override

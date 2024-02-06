@@ -24,14 +24,16 @@ class _HomeState extends State<Home> {
       body: Scrollbar(
       child: SingleChildScrollView(
       child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Eternity.png"),
             fit: BoxFit.cover,
           ),
         ),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        // width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

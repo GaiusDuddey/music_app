@@ -46,17 +46,22 @@ class _HomepageState extends State<Homepage> {
                 SizedBox(
                   width: 10,
                 ),
-                Container(
-                  color: Colors.amber,
-                  height: 150,
-                  width: 150,
-                  child: const Image(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/Imagine.png'),
-                    width: 100.0,
-                    height: 100.0,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/home");
+                  },
+                  child: Container(
+                    color: Colors.amber,
+                    height: 150,
+                    width: 150,
+                    child: const Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage('assets/images/Imagine.png'),
+                      width: 100.0,
+                      height: 100.0,
+                    ),
                   ),
-                )
+                ),
               ],
             ),
             SizedBox(
@@ -65,29 +70,39 @@ class _HomepageState extends State<Homepage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  color: Colors.amber,
-                  height: 150,
-                  width: 150,
-                  child: const Image(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/Gases.png'),
-                    width: 100.0,
-                    height: 100.0,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/home");
+                  },
+                  child: Container(
+                    color: Colors.amber,
+                    height: 150,
+                    width: 150,
+                    child: const Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage('assets/images/Gases.png'),
+                      width: 100.0,
+                      height: 100.0,
+                    ),
                   ),
                 ),
                 SizedBox(
                   width: 10,
                 ),
-                Container(
-                  color: Colors.amber,
-                  height: 150,
-                  width: 150,
-                  child: const Image(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/Wolf.png'),
-                    width: 100.0,
-                    height: 100.0,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/home");
+                  },
+                  child: Container(
+                    color: Colors.amber,
+                    height: 150,
+                    width: 150,
+                    child: const Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage('assets/images/Wolf.png'),
+                      width: 100.0,
+                      height: 100.0,
+                    ),
                   ),
                 ),
               ],

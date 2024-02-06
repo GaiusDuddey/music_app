@@ -25,7 +25,8 @@ class _HomeScreenState extends State<Disc> {
     ShakeDetector.autoStart(onPhoneShake: () {
       Navigator.pop(context, "/rat");
       Navigator.pushNamed(context, "/mic");
-    });
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override

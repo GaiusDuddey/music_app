@@ -15,6 +15,7 @@ import 'package:music_app/Songs/spiderman.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
 import 'package:music_app/homepage.dart';
+import 'package:music_app/list.dart';
 import 'package:music_app/signupscreen.dart';
 import 'loginscreen.dart';
 
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
         "/heroes": (context) => Heroes(),
         "/coffin": (context) => Coffin(),
         "/rat": (context) => Rat(),
+        "/list": (context) => Listview(),
       },
       initialRoute:"/loginscreen",
     );
