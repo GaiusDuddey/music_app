@@ -23,9 +23,11 @@ class _HomeScreenState extends State<Alone> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/believer");
-    });
+      Navigator.pop(context, "/home_screen");
+      Navigator.pushNamed(context, "/boys");
+    },
+    shakeThresholdGravity: 2,
+    );
   }
 
   @override
@@ -111,11 +113,26 @@ class _HomeScreenState extends State<Alone> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/home_screen");
+                    },
                   child: Icon(
                     Icons.skip_previous,
                     size: 40,
                   ),
                 ),
+                ),
+                 const SizedBox(height: 20, width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds - 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/rewind.png', height: 40, width: 40,),
+                ),
+                const SizedBox(height: 20),
                 const SizedBox(height: 20, width: 20),
                 InkWell(
                   onTap: playPause,
@@ -131,10 +148,18 @@ class _HomeScreenState extends State<Alone> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
+                  child: Image.asset('assets/icons/forward.png' ,height: 40, width: 40,),
+                ),
+                const SizedBox(width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds + 10));
+                    setState(() {});
+                  },
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/believer");
+                      Navigator.pushNamed(context, "/boys");
                     },
                     child: Icon(
                       Icons.skip_next,

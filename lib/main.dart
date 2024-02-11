@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:music_app/Songs/alone.dart';
 import 'package:music_app/Songs/believer.dart';
 import 'package:music_app/Songs/boys.dart';
+import 'package:music_app/Songs/coffin.dart';
 import 'package:music_app/Songs/disc.dart';
 import 'package:music_app/Songs/fire.dart';
+import 'package:music_app/Songs/heroes.dart';
 import 'package:music_app/Songs/ignite.dart';
+import 'package:music_app/Songs/mic.dart';
 import 'package:music_app/Songs/pirates.dart';
+import 'package:music_app/Songs/rat.dart';
 import 'package:music_app/Songs/song.dart';
 import 'package:music_app/Songs/spiderman.dart';
 import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
 import 'package:music_app/homepage.dart';
+import 'package:music_app/list.dart';
 import 'package:music_app/signupscreen.dart';
 import 'loginscreen.dart';
 
@@ -62,6 +67,11 @@ class MyApp extends StatelessWidget {
         "/pirates": (context) => Pirates(),
         "/song": (context) => Song(),
         "/spiderman": (context) => SpiderMan(),
+        "/mic": (context) => Mic(),
+        "/heroes": (context) => Heroes(),
+        "/coffin": (context) => Coffin(),
+        "/rat": (context) => Rat(),
+        "/list": (context) => Listview(),
       },
       initialRoute:"/loginscreen",
     );

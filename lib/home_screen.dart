@@ -2,6 +2,7 @@ import 'package:music_app/audio_info.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/utils/utils.dart';
+import 'package:shake/shake.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,6 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     initPlayer();
     super.initState();
+    ShakeDetector.autoStart(onPhoneShake: () {
+      Navigator.pop(context, "/spiderman");
+      Navigator.pushNamed(context, "/alone");
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override
@@ -106,7 +112,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Icon(Icons.skip_previous),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/spiderman");
+                    },
+                    child: Icon(
+                      Icons.skip_previous,
+                      size: 40,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds - 10));
+                    setState(() {});
+                  },
+                  child: Image.asset(
+                    'assets/icons/rewind.png',
+                    height: 40,
+                    width: 40,
+                  ),
                 ),
                 const SizedBox(height: 20),
                 InkWell(
@@ -123,7 +150,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Icon(Icons.skip_next),
+                  child: Image.asset(
+                    'assets/icons/forward.png',
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+                const SizedBox(width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds + 10));
+                    setState(() {});
+                  },
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/alone");
+                    },
+                    child: Icon(
+                      Icons.skip_next,
+                      size: 40,
+                    ),
+                  ),
                 ),
               ],
             ),

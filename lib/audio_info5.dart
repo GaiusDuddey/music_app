@@ -7,21 +7,21 @@ class AudioInfo5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/Winter.png',
-          width: 250,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset('assets/images/Winter.png',width: 250,height: 250,
+          fit: BoxFit.cover,
+          ),
         ),
-        const SizedBox(height: 30),
-        const Text(
+        Text(
           'Fire',
-          style:
-              TextStyle(fontSize: 30, color: Color.fromARGB(255, 149, 11, 1)),
+          style: TextStyle(fontSize: 30,fontWeight: FontWeight.w100, color: Color.fromARGB(255, 149, 11, 1)),
         ),
-        const SizedBox(height: 30),
-        const Text(
+        const SizedBox(height: 30,),
+        Text(
           'Music',
-          style: TextStyle(fontSize: 30, color: Colors.black),
-        ),
+          style: TextStyle(fontSize: 30,color: Colors.black),
+        )
       ],
     );
   }

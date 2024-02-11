@@ -23,9 +23,10 @@ class _HomeScreenState extends State<Fire> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/ignite");
-    });
+      Navigator.pop(context, "/pirates");
+      Navigator.pushNamed(context, "/song");
+    },
+    shakeThresholdGravity: 2,);
   }
 
   @override
@@ -114,7 +115,7 @@ class _HomeScreenState extends State<Fire> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/disc");
+                      Navigator.pushNamed(context, "/pirates");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -123,6 +124,14 @@ class _HomeScreenState extends State<Fire> {
                   ),
                 ),
                 const SizedBox(height: 20, width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds - 10));
+                    setState(() {});
+                  },
+                  child: Image.asset('assets/icons/rewind.png', height: 40, width: 40,),
+                ),
+                const SizedBox(height: 20),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
@@ -137,10 +146,18 @@ class _HomeScreenState extends State<Fire> {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
+                  child: Image.asset('assets/icons/forward.png', height: 40, width: 40,),
+                ),
+                const SizedBox(width: 20),
+                InkWell(
+                  onTap: () {
+                    player.seek(Duration(seconds: _position.inSeconds + 10));
+                    setState(() {});
+                  },
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/ignite");
+                      Navigator.pushNamed(context, "/song");
                     },
                     child: Icon(
                       Icons.skip_next,

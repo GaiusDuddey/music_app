@@ -21,15 +21,19 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      body: Container(
+      body: Scrollbar(
+      child: SingleChildScrollView(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Eternity.png"),
             fit: BoxFit.cover,
           ),
         ),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        // width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -111,12 +115,48 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
+             TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/heroes");
+              },
+              child: Text(
+                "Heroes",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/coffin");
+              },
+              child: Text(
+                "Coffin",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/rat");
+              },
+              child: Text(
+                "Fat Rat",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/disc");
               },
               child: Text(
                 "Discfigure",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/mic");
+              },
+              child: Text(
+                "Mic Drop",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
@@ -131,6 +171,8 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
+      ),
+      ),
       ),
     );
   }

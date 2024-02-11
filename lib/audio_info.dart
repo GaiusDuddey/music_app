@@ -7,20 +7,21 @@ class AudioInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/Cool.png',
-          width: 250,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset('assets/images/Cool.png',width: 250,height: 250,
+          fit: BoxFit.cover,
+          ),
         ),
-        const SizedBox(height: 30),
-        const Text(
+        Text(
           'Optimus Prime',
-          style: TextStyle(fontSize: 30, color: Colors.black),
+          style: TextStyle(fontSize: 30,fontWeight: FontWeight.w100, color: Color.fromARGB(255, 149, 11, 1)),
         ),
-        const SizedBox(height: 30),
-        const Text(
-          'NCS Link',
-          style: TextStyle(fontSize: 30, color: Colors.blue),
-        ),
+        const SizedBox(height: 30,),
+        Text(
+          'Music',
+          style: TextStyle(fontSize: 30,color: Colors.black),
+        )
       ],
     );
   }
