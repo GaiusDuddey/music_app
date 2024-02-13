@@ -154,7 +154,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/SpiderMan.png'),
+                            image: AssetImage('assets/images/Cool.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
