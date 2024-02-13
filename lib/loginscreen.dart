@@ -74,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 bottom: 4,
                               ),
                               decoration: BoxDecoration(
-                                color: Colors.black,
+                                color: Colors.black ,
                                 borderRadius: BorderRadius.circular(50),
                               ),
                               child : GestureDetector(
