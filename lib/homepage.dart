@@ -166,7 +166,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/believer");
+                        Navigator.pushNamed(context, "/home_screen");
                       },
                       child: Container(
                         height: 120,
@@ -175,7 +175,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Thunder.png'),
+                            image: AssetImage('assets/images/Cool.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -290,7 +290,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/ignite");
+                        Navigator.pushNamed(context, "/rat");
                       },
                       child: Container(
                         height: 120,
@@ -299,7 +299,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Space.png'),
+                            image: AssetImage('assets/images/Rat.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
@@ -353,7 +353,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/spiderman");
+                        Navigator.pushNamed(context, "/ignite");
                       },
                       child: Container(
                         height: 120,
@@ -362,7 +362,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/SpiderMan.png'),
+                            image: AssetImage('assets/images/Space.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
