@@ -145,7 +145,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/spiderman");
+                        Navigator.pushNamed(context, "/home_screen");
                       },
                       child: Container(
                         height: 120,
@@ -166,7 +166,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/home_screen");
+                        Navigator.pushNamed(context, "/disc");
                       },
                       child: Container(
                         height: 120,
@@ -175,7 +175,7 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(10.0),
                           child: const Image(
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/Cool.png'),
+                            image: AssetImage('assets/images/Imagine.png'),
                             width: 100.0,
                             height: 100.0,
                           ),
