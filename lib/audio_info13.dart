@@ -15,9 +15,9 @@ class AudioInfo13 extends StatelessWidget {
         ),
         Text(
           'Coffin',
-          style: TextStyle(fontSize: 30,fontWeight: FontWeight.w100, color: Color.fromARGB(255, 149, 11, 1)),
+          style: TextStyle(fontSize: 35,fontWeight: FontWeight.w400, color: Colors.white),
         ),
-        const SizedBox(height: 30,),
+        const SizedBox(height: 35,),
         Text(
           'Music',
           style: TextStyle(fontSize: 30,color: Colors.black),

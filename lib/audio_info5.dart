@@ -15,12 +15,12 @@ class AudioInfo5 extends StatelessWidget {
         ),
         Text(
           'Fire',
-          style: TextStyle(fontSize: 30,fontWeight: FontWeight.w100, color: Color.fromARGB(255, 149, 11, 1)),
+          style: TextStyle(fontSize: 35,fontWeight: FontWeight.w200, color: Colors.white),
         ),
         const SizedBox(height: 30,),
         Text(
           'Music',
-          style: TextStyle(fontSize: 30,color: Colors.black),
+          style: TextStyle(fontSize: 35,color: Colors.black),
         )
       ],
     );
