@@ -115,7 +115,7 @@ class _HomeScreenState extends State<Daxten> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/mic");
+                      Navigator.pushNamed(context, "/spiderman");
                     },
                     child: Icon(
                       Icons.skip_previous,
@@ -157,7 +157,7 @@ class _HomeScreenState extends State<Daxten> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      Navigator.pushNamed(context, "/home_screen");
+                      Navigator.pushNamed(context, "/company");
                     },
                     child: Icon(
                       Icons.skip_next,

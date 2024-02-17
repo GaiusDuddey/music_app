@@ -9,7 +9,7 @@ class AudioInfo15 extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
-          child: Image.asset('assets/images/Light.png',width: 250,height: 250,
+          child: Image.asset('assets/images/Blue.png',width: 250,height: 250,
           fit: BoxFit.cover,
           ),
         ),
