@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/icons/musicicon.png",
+              "assets/images/logo.png",
               width: 150,
               height: 150,
             ),
@@ -149,24 +149,24 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, "/mic");
-              },
-              child: Text(
-                "Mic Drop",
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, "/spiderman");
-              },
-              child: Text(
-                "Spider Man",
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-            )
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, "/mic");
+            //   },
+            //   child: Text(
+            //     "Mic Drop",
+            //     style: TextStyle(fontSize: 20, color: Colors.black),
+            //   ),
+            // ),
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, "/spiderman");
+            //   },
+            //   child: Text(
+            //     "Spider Man",
+            //     style: TextStyle(fontSize: 20, color: Colors.black),
+            //   ),
+            // )
           ],
         ),
       ),

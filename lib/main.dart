@@ -16,6 +16,7 @@ import 'package:music_app/home_screen.dart';
 import 'package:music_app/home.dart';
 import 'package:music_app/homepage.dart';
 import 'package:music_app/list.dart';
+import 'package:music_app/secondhome.dart';
 import 'package:music_app/signupscreen.dart';
 import 'loginscreen.dart';
 
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         "/loginscreen": (context) => LoginScreen(),
         "/home_page": (context) => Homepage(),
         "/home": (context) => Home(),
+        "/secondhome": (context) => SecondHome(),
         "/home_screen": (context) => HomeScreen(),
         "/alone": (context) => Alone(),
         "/believer": (context) => Believer(),

@@ -48,7 +48,7 @@ class _HomepageState extends State<Homepage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, "/home");
+                    Navigator.pushNamed(context, "/secondhome");
                   },
                   child: Container(
                     color: Colors.amber,
