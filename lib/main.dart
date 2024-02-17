@@ -3,6 +3,8 @@ import 'package:music_app/Songs/alone.dart';
 import 'package:music_app/Songs/believer.dart';
 import 'package:music_app/Songs/boys.dart';
 import 'package:music_app/Songs/coffin.dart';
+import 'package:music_app/Songs/company.dart';
+import 'package:music_app/Songs/daxten.dart';
 import 'package:music_app/Songs/disc.dart';
 import 'package:music_app/Songs/fire.dart';
 import 'package:music_app/Songs/heroes.dart';
@@ -73,6 +75,8 @@ class MyApp extends StatelessWidget {
         "/heroes": (context) => Heroes(),
         "/coffin": (context) => Coffin(),
         "/rat": (context) => Rat(),
+        "/daxten": (context) => Daxten(),
+        "/company": (context) => Company(),
         "/list": (context) => Listview(),
       },
       initialRoute:"/loginscreen",

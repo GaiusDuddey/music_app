@@ -166,7 +166,25 @@ class _SecondHomeState extends State<SecondHome> {
                 "Spider Man",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
-            )
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/daxten");
+              },
+              child: Text(
+                "Flashing Lights",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/company");
+              },
+              child: Text(
+                "Be your Company",
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+            ),
           ],
         ),
       ),

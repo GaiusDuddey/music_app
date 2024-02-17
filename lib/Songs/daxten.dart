@@ -1,17 +1,17 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/audio_info2.dart';
+import 'package:music_app/audio_info15.dart';
 import 'package:music_app/utils/utils.dart';
 import 'package:shake/shake.dart';
 
-class SpiderMan extends StatefulWidget {
-  const SpiderMan({super.key});
+class Daxten extends StatefulWidget {
+  const Daxten({super.key});
 
   @override
-  State<SpiderMan> createState() => _HomeScreenState();
+  State<Daxten> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<SpiderMan> {
+class _HomeScreenState extends State<Daxten> {
   bool isPlaying = false;
   late final AudioPlayer player;
   late final AssetSource path;
@@ -23,8 +23,8 @@ class _HomeScreenState extends State<SpiderMan> {
     initPlayer();
     super.initState();
     ShakeDetector.autoStart(onPhoneShake: () {
-      Navigator.pop(context, "/mic");
-      Navigator.pushNamed(context, "/daxten");
+      Navigator.pop(context, "/spiderman");
+      Navigator.pushNamed(context, "/company");
     },
     shakeThresholdGravity: 2,);
   }
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<SpiderMan> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('audio/Spider.mp3');
+    path = AssetSource('audio/Daxten.mp3');
     // set a callback for chaning duration
     player.onDurationChanged.listen((Duration d) {
       setState(() => _duration = d);
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<SpiderMan> {
                   Navigator.pop(context);
                 },
                 child: Text("")),
-            const AudioInfo2(),
+            const AudioInfo15(),
             const SizedBox(height: 50),
             Slider(
               value: _position.inSeconds.toDouble(),
