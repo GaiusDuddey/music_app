@@ -15,7 +15,7 @@ class AudioInfo5 extends StatelessWidget {
         ),
         Text(
           'Fire',
-          style: TextStyle(fontSize: 35,fontWeight: FontWeight.w200, color: Colors.white),
+          style: TextStyle(fontSize: 35,fontWeight: FontWeight.w400, color: Colors.white),
         ),
         const SizedBox(height: 30,),
         Text(
