@@ -55,7 +55,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SignUpScreen(),
-      routes: {
+      routes: <String, WidgetBuilder>{
+
         "/signupscreen": (context) => SignUpScreen(),
         "/loginscreen": (context) => LoginScreen(),
         "/home_page": (context) => Homepage(),
