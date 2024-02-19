@@ -10,18 +10,25 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  final _formKey = GlobalKey<FormState>(); // Add form key
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _confirmPasswordController = TextEditingController();
+
   double screenHeight = 0;
   double screenWidth = 0;
+
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        backgroundColor: Colors.black54,
-        body: SingleChildScrollView(
-          child: Container(
-            child: SizedBox(
+      backgroundColor: Colors.black54,
+      body: SingleChildScrollView(
+        child: Container(
+          child: SizedBox(
             height: screenHeight,
             width: screenWidth,
             child: Stack(
@@ -32,9 +39,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     padding: EdgeInsets.only(
                       top: screenHeight / 8,
                     ),
-                    // child:Image.asset(
-                    //     "icons/musicicon.png"
-                    // );
                     child: Text(
                       "SIGN UP",
                       style: TextStyle(
@@ -58,91 +62,97 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     padding: EdgeInsets.symmetric(
                       horizontal: screenWidth / 12,
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            textField("Username", Icons.person_outline, false),
-                            textField("Email", Icons.email_outlined, false,),
-                            textField("Password", Icons.lock_outlined, true),
-                            textField("Confirm Password", Icons.lock_outlined, true),
-                          ],
-                        ),
-                        Container(
-                          width: screenWidth,
-                          height: 50,
-                          margin: const EdgeInsets.only(
-                            bottom: 4,
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              textField("Username", Icons.person_outline, false, _usernameController),
+                              textField("Email", Icons.email_outlined, false, _emailController),
+                              textField("Password", Icons.lock_outlined, true, _passwordController),
+                              textField("Confirm Password", Icons.lock_outlined, true, _confirmPasswordController),
+                            ],
                           ),
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child: GestureDetector(
-                            onTap: () {
-                              // Placeholder for sign-up logic
-                              performSignUp();
-                              // Navigate to the home screen after successful sign-up
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => LoginScreen(),
+                          Container(
+                            width: screenWidth,
+                            height: 50,
+                            margin: const EdgeInsets.only(
+                              bottom: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                if (_formKey.currentState!.validate()) {
+                                  // If the form is valid, perform sign-up logic
+                                  performSignUp();
+                                  // Navigate to the login screen after successful sign-up
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginScreen(),
+                                    ),
+                                  );
+                                }
+                              },
+                              child: const Center(
+                                child: Text(
+                                  "SIGN UP",
+                                  style: TextStyle(
+                                    fontFamily: "Montserrat",
+                                    color: Colors.white,
+                                    letterSpacing: 1.5,
+                                    fontWeight: FontWeight.w700,
+                                  ),
                                 ),
-                              );
-                            },
-                            child: const Center(
-                              child: Text(
-                                "SIGN UP",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(
+                              bottom: 30,
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => const LoginScreen(),
+                                  ),
+                                );
+                              },
+                              child: const Text(
+                                "Already have an account? Login",
                                 style: TextStyle(
                                   fontFamily: "Montserrat",
-                                  color: Colors.white,
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black54,
+                                  fontSize: 12,
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(
-                            bottom: 30,
-                          ),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => const LoginScreen(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              "Already have an account? Login",
-                              style: TextStyle(
-                                fontFamily: "Montserrat",
-                                color: Colors.black54,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
-            ),
           ),
         ),
+      ),
     );
   }
 
-  Widget textField(String hint, IconData icon, bool password) {
+  Widget textField(String hint, IconData icon, bool password, TextEditingController controller) {
     return Container(
       margin: const EdgeInsets.only(
         bottom: 16,
       ),
       child: TextFormField(
+        controller: controller,
         obscureText: password,
         decoration: InputDecoration(
           hintText: hint,
@@ -167,6 +177,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
             top: 14,
           ),
         ),
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter $hint';
+          }
+          // Add more specific validation if needed
+          return null;
+        },
       ),
     );
   }
