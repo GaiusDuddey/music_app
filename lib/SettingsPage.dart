@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../services/theme_manager.dart';
+import '../music_app/theme_manager.dart';
 import '../services/language_manager.dart';
 import '../screens/profile_screen.dart';
 
