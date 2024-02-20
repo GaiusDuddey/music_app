@@ -21,6 +21,10 @@ import 'package:music_app/list.dart';
 import 'package:music_app/secondhome.dart';
 import 'package:music_app/signupscreen.dart';
 import 'loginscreen.dart';
+import 'package:music_app/bottombar_profile.dart';
+import 'package:music_app/bottombar_search.dart';
+import 'package:music_app/bottombar_music.dart';
+import 'package:music_app/bottombar_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,7 +60,6 @@ class MyApp extends StatelessWidget {
       ),
       home: const SignUpScreen(),
       routes: <String, WidgetBuilder>{
-
         "/signupscreen": (context) => SignUpScreen(),
         "/loginscreen": (context) => LoginScreen(),
         "/home_page": (context) => Homepage(),
@@ -79,8 +82,12 @@ class MyApp extends StatelessWidget {
         "/daxten": (context) => Daxten(),
         "/company": (context) => Company(),
         "/list": (context) => Listview(),
+        "/profile": (context) => BottombarProfile(),
+        "/search": (context) => BottombarSearch(),
+        "/homebottom": (context) => BottombarHome(),
+        "/playlist": (context) => BottombarMusic(),
       },
-      initialRoute:"/loginscreen",
+      initialRoute: "/loginscreen",
     );
   }
 }

@@ -403,9 +403,12 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,
+          selectedItemColor: Colors.amber,
+          
           onTap: (index) {
             setState(() {
               myIndex = index;
+      
             });
           },
           currentIndex: myIndex,
