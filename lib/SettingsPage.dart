@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../music_app/theme_manager.dart';
+import '../services/language_manager.dart';
+import '../screens/profile_screen.dart';
 import 'LanguageNotifier.dart';
 import 'ThemeNotifier.dart';
 
@@ -50,7 +54,7 @@ class SettingsPage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>),
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
               );
             },
           ),
