@@ -14,6 +14,14 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
+          centerTitle: true,
+        title: Text(
+          'MUSIC',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Container(
         color: Colors.black,
@@ -124,8 +132,10 @@ class _HomepageState extends State<Homepage> {
                   width: 150,
                   alignment: Alignment.center,
                   child: Text(
-                    "Playlist",
-                    style: TextStyle(color: Colors.black),
+                    "Hot Songs",
+                    style: TextStyle(color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -269,8 +279,9 @@ class _HomepageState extends State<Homepage> {
                   width: 150,
                   alignment: Alignment.center,
                   child: Text(
-                    "Playlist",
-                    style: TextStyle(color: Colors.black),
+                    "New Songs",
+                    style: TextStyle(color: Colors.black,
+                    fontWeight: FontWeight.bold,),
                     textAlign: TextAlign.center,
                   ),
                 ),

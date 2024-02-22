@@ -192,9 +192,7 @@ class _BottombarProfileState extends State<BottombarProfile> {
               ),
             ],
           ),
-          // SizedBox(
-          //   width:10,
-          //  ),
+        
         ),
       ),
     );
