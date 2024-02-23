@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
         "/homebottom": (context) => BottombarHome(),
         "/playlist": (context) => BottombarMusic(),
       },
-      initialRoute: "/settingsmain" ,
+      initialRoute: "/loginscreen" ,
     );
   }
 }

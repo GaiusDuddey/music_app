@@ -31,6 +31,14 @@ class _SettingsMainState extends State<SettingsMain> {
     );
   }
 
+  void _navigateToProfileScreen() {
+    // Navigation logic to profile screen
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ProfileScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,15 +50,16 @@ class _SettingsMainState extends State<SettingsMain> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
-              child: ClipOval(
+            GestureDetector(
+              onTap: _navigateToProfileScreen,
+              child: Center(
                 child: Container(
                   width: 150,
                   height: 150,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/musicicon.png'), // Replace with your image path
+                      image: AssetImage('assets/user.png'), // Replace with your image path
                       fit: BoxFit.cover,
                     ),
                   ),
