@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'musicanimation.dart';
+
 class SettingsMain extends StatefulWidget {
   @override
   _SettingsMainState createState() => _SettingsMainState();
@@ -31,11 +33,11 @@ class _SettingsMainState extends State<SettingsMain> {
     );
   }
 
-  void _navigateToProfileScreen() {
-    // Navigation logic to profile screen
+  void _navigateToMusicAnimation() {
+    // Navigation logic to music animation page
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ProfileScreen()),
+      MaterialPageRoute(builder: (context) => MusicAnimationPage()),
     );
   }
 
@@ -51,7 +53,7 @@ class _SettingsMainState extends State<SettingsMain> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             GestureDetector(
-              onTap: _navigateToProfileScreen,
+              onTap: _navigateToProfile,
               child: Center(
                 child: Container(
                   width: 150,
@@ -93,14 +95,10 @@ class _SettingsMainState extends State<SettingsMain> {
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: _navigateToProfile,
+              onPressed: _navigateToMusicAnimation,
               child: Text(
-                'Go to Profile',
+                'Show Music Animation',
                 style: TextStyle(fontSize: 20.0),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: _isDarkMode ? Colors.white : Colors.blue, // Change button color based on dark mode
-                onPrimary: _isDarkMode ? Colors.black : Colors.white, // Change text color based on dark mode
               ),
             ),
           ],
@@ -111,7 +109,6 @@ class _SettingsMainState extends State<SettingsMain> {
   }
 }
 
-// Example profile screen widget
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -129,7 +126,6 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-// App widget with app-wide dark mode state
 class MyApp extends StatefulWidget {
   final Widget child;
 
