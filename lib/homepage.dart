@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/bottombar_home.dart';
+import 'package:music_app/bottombar_music.dart';
 import 'package:music_app/bottombar_profile.dart';
+import 'package:music_app/bottombar_search.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -18,6 +21,9 @@ class _HomepageState extends State<Homepage> {
   }
 
   List<Widget> widgetlist = const[
+    BottombarHome(),
+    BottombarSearch(),
+    BottombarMusic(),
     BottombarProfile(),
   ];
 
