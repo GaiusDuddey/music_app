@@ -4,13 +4,11 @@ class MusicAnimationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Music Animation'),
+      ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MusicAnimation(),
-          ],
-        ),
+        child: MusicAnimation(),
       ),
     );
   }
@@ -60,27 +58,27 @@ class _MusicAnimationState extends State<MusicAnimation> with SingleTickerProvid
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         MusicLetter(
-          letter: 'THE',
+          letter: 'M',
           scaleAnimation: _scaleAnimation,
         ),
         SizedBox(width: 10),
         MusicLetter(
-          letter: 'APP',
+          letter: 'U',
           scaleAnimation: _scaleAnimation,
         ),
         SizedBox(width: 10),
         MusicLetter(
-          letter: 'WILL',
-          scaleAnimation: _scaleAnimation,
-        ),
-        SizedBox(width: 20),
-        MusicLetter(
-          letter: 'CONTIUNE',
+          letter: 'S',
           scaleAnimation: _scaleAnimation,
         ),
         SizedBox(width: 10),
         MusicLetter(
-          letter: 'IT IS GOOD',
+          letter: 'I',
+          scaleAnimation: _scaleAnimation,
+        ),
+        SizedBox(width: 10),
+        MusicLetter(
+          letter: 'C',
           scaleAnimation: _scaleAnimation,
         ),
       ],
