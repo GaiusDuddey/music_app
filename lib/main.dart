@@ -25,6 +25,7 @@ import 'package:music_app/bottombar_profile.dart';
 import 'package:music_app/bottombar_search.dart';
 import 'package:music_app/bottombar_music.dart';
 import 'package:music_app/bottombar_home.dart';
+import 'package:music_app/settingsmain.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const SignUpScreen(),
       routes: <String, WidgetBuilder>{
+        "/settingsmain":(context)=> SettingsMain(),
         "/signupscreen": (context) => SignUpScreen(),
         "/loginscreen": (context) => LoginScreen(),
         "/home_page": (context) => Homepage(),
@@ -87,7 +89,7 @@ class MyApp extends StatelessWidget {
         "/homebottom": (context) => BottombarHome(),
         "/playlist": (context) => BottombarMusic(),
       },
-      initialRoute: "/loginscreen",
+      initialRoute: "/settingsmain" ,
     );
   }
 }
