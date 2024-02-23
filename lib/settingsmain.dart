@@ -1,48 +1,16 @@
 import 'package:flutter/material.dart';
+import 'musicanimation.dart'; // Import the music page file
 
-import 'musicanimation.dart';
-
-class SettingsMain extends StatefulWidget {
-  @override
-  _SettingsMainState createState() => _SettingsMainState();
-}
-
-class _SettingsMainState extends State<SettingsMain> {
-  bool _isDarkMode = false;
-  bool _isItalicFont = false;
-
-  void _toggleDarkMode(bool newValue) {
-    setState(() {
-      _isDarkMode = newValue;
-      // Set app-wide dark mode
-      MyApp.of(context).setDarkMode(newValue);
-    });
-  }
-
-  void _toggleFontStyle() {
-    setState(() {
-      _isItalicFont = !_isItalicFont;
-    });
-  }
-
-  void _navigateToProfile() {
-    // Navigation logic to profile screen
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ProfileScreen()),
-    );
-  }
-
-  void _navigateToMusicAnimation() {
-    // Navigation logic to music animation page
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => MusicAnimationPage()),
-    );
-  }
-
+class SettingsMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration.zero, () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MusicAnimationPage()), // Navigate to the music animation page
+      );
+    });
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
@@ -52,8 +20,9 @@ class _SettingsMainState extends State<SettingsMain> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Your settings UI here
             GestureDetector(
-              onTap: _navigateToProfile,
+              onTap: _navigateToProfileScreen,
               child: Center(
                 child: Container(
                   width: 150,
@@ -71,91 +40,49 @@ class _SettingsMainState extends State<SettingsMain> {
             SizedBox(height: 20.0),
             Text(
               'Dark Mode',
-              style: TextStyle(fontSize: 20.0, color: _isDarkMode ? Colors.white : Colors.black), // Change text color based on dark mode
+              style: TextStyle(fontSize: 20.0),
             ),
             Switch(
-              value: _isDarkMode,
-              onChanged: _toggleDarkMode,
+              value: false, // Assuming default is false
+              onChanged: (value) {}, // Assuming you have a function for toggling dark mode
             ),
             SizedBox(height: 20.0),
             Text(
               'Text Font',
-              style: TextStyle(fontSize: 20.0, color: _isDarkMode ? Colors.white : Colors.black), // Change text color based on dark mode
+              style: TextStyle(fontSize: 20.0),
             ),
             TextButton(
-              onPressed: _toggleFontStyle,
+              onPressed: () {}, // Assuming you have a function for toggling font style
               child: Text(
-                _isItalicFont ? 'Normal Font' : 'Italic Font',
+                'Italic Font',
                 style: TextStyle(
                   fontSize: 16.0,
                   color: Colors.blue,
-                  fontStyle: _isItalicFont ? FontStyle.normal : FontStyle.italic,
+                  fontStyle: FontStyle.italic,
                 ),
               ),
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: _navigateToMusicAnimation,
+              onPressed: () {}, // Assuming you have a function for navigating to profile
               child: Text(
-                'Show Music Animation',
+                'Go to Profile',
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
           ],
         ),
       ),
-      backgroundColor: _isDarkMode ? Colors.black : Colors.white, // Set background color based on dark mode
     );
   }
-}
 
-class ProfileScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile'),
-      ),
-      body: Center(
-        child: Text(
-          'Profile Screen',
-          style: TextStyle(fontSize: 24.0),
-        ),
-      ),
-    );
-  }
-}
-
-class MyApp extends StatefulWidget {
-  final Widget child;
-
-  MyApp({Key? key, required this.child}) : super(key: key);
-
-  static _MyAppState of(BuildContext context) => context.findAncestorStateOfType<_MyAppState>()!;
-
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  bool _isDarkMode = false;
-
-  void setDarkMode(bool isDarkMode) {
-    setState(() {
-      _isDarkMode = isDarkMode;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'My App',
-      theme: _isDarkMode ? ThemeData.dark() : ThemeData.light(),
-      home: widget.child,
-    );
+  void _navigateToProfileScreen() {
+    // Navigation logic to profile screen
   }
 }
 
 void main() {
-  runApp(MyApp(child: SettingsMain()));
+  runApp(MaterialApp(
+    home: SettingsMain(),
+  ));
 }
