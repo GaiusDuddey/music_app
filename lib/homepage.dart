@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/bottombar_profile.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -8,13 +9,24 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  int myIndex = 0;
+  int _selectedIndex = 0;
+
+  void _navigateBottomBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  List<Widget> widgetlist = const[
+    BottombarProfile(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-          centerTitle: true,
+        centerTitle: true,
         title: Text(
           'MUSIC',
           style: TextStyle(
@@ -133,8 +145,9 @@ class _HomepageState extends State<Homepage> {
                   alignment: Alignment.center,
                   child: Text(
                     "Hot Songs",
-                    style: TextStyle(color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -280,8 +293,10 @@ class _HomepageState extends State<Homepage> {
                   alignment: Alignment.center,
                   child: Text(
                     "New Songs",
-                    style: TextStyle(color: Colors.black,
-                    fontWeight: FontWeight.bold,),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -412,17 +427,11 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: _navigateBottomBar,
           showUnselectedLabels: false,
-          type: BottomNavigationBarType.shifting,
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.amber,
-          
-          onTap: (index) {
-            setState(() {
-              myIndex = index;
-      
-            });
-          },
-          currentIndex: myIndex,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
