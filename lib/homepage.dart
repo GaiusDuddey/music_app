@@ -12,7 +12,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 3;
 
   void _navigateBottomBar(int index) {
     setState(() {
@@ -20,7 +20,7 @@ class _HomepageState extends State<Homepage> {
     });
   }
 
-  List<Widget> widgetlist = const[
+  List<Widget> widgetlist = const [
     BottombarHome(),
     BottombarSearch(),
     BottombarMusic(),
@@ -433,10 +433,11 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+          // backgroundColor: Colors.grey,
           currentIndex: _selectedIndex,
           onTap: _navigateBottomBar,
           showUnselectedLabels: false,
-          type: BottomNavigationBarType.fixed,
+          type: BottomNavigationBarType.shifting,
           selectedItemColor: Colors.amber,
           items: [
             BottomNavigationBarItem(
