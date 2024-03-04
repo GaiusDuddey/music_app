@@ -444,7 +444,7 @@ class _HomepageState extends State<Homepage> {
           String routeName;
           switch (index) {
             case 0:
-              routeName = "/homebottom";
+              routeName = "/homepage";
               break;
             case 1:
               routeName = "/search";

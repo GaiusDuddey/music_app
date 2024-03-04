@@ -13,19 +13,24 @@ class _BottombarSearchState extends State<BottombarSearch> {
     return Scaffold(
       appBar: AppBar(
         // title: Text(widget.title),
-        actions: [IconButton(onPressed: () {
-          showSearch(context: context, delegate: CustomSearchDelegate(),);
-        },
-         icon: const Icon(Icons.search),
-        )
+        actions: [
+          IconButton(
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: CustomSearchDelegate(),
+              );
+            },
+            icon: const Icon(Icons.search),
+          )
         ],
       ),
     );
   }
 }
 
-class CustomSearchDelegate extends SearchDelegate{
-  List<String> SearchTerms =[
+class CustomSearchDelegate extends SearchDelegate {
+  List<String> SearchTerms = [
     'NCS',
     'Alone',
     'The Boys',
@@ -38,35 +43,44 @@ class CustomSearchDelegate extends SearchDelegate{
     'Coffin',
     'Fat Rat',
     'Discfigure',
+    'Mic Drop',
+    'Spider Man',
+    'Flashing Lights',
+    'Be your Company',
   ];
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
-      IconButton(icon: const Icon(Icons.clear),
-      onPressed: () {
-        query='';
-      },
+      IconButton(
+        icon: const Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
       )
     ];
   }
+
   @override
   Widget buildLeading(BuildContext context) {
-    return IconButton(icon: const Icon(Icons.arrow_back),
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
       onPressed: () {
-      close(context, null);
-    },);
+        close(context, null);
+      },
+    );
   }
+
   @override
   Widget buildResults(BuildContext context) {
-    List<String> matchQuery =[];
-    for(var name in SearchTerms){
-      if(name.toLowerCase().contains(query.toLowerCase())){
+    List<String> matchQuery = [];
+    for (var name in SearchTerms) {
+      if (name.toLowerCase().contains(query.toLowerCase())) {
         matchQuery.add(name);
       }
     }
     return ListView.builder(
       itemCount: matchQuery.length,
-      itemBuilder: (context, index){
+      itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
           title: Text(result),
@@ -74,17 +88,18 @@ class CustomSearchDelegate extends SearchDelegate{
       },
     );
   }
+
   @override
   Widget buildSuggestions(BuildContext context) {
-     List<String> matchQuery =[];
-    for(var name in SearchTerms){
-      if(name.toLowerCase().contains(query.toLowerCase())){
+    List<String> matchQuery = [];
+    for (var name in SearchTerms) {
+      if (name.toLowerCase().contains(query.toLowerCase())) {
         matchQuery.add(name);
       }
     }
     return ListView.builder(
       itemCount: matchQuery.length,
-      itemBuilder: (context, index){
+      itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
           title: Text(result),
