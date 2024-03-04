@@ -20,6 +20,7 @@ import 'package:music_app/homepage.dart';
 import 'package:music_app/list.dart';
 import 'package:music_app/secondhome.dart';
 import 'package:music_app/signupscreen.dart';
+import 'anime1.dart';
 import 'loginscreen.dart';
 import 'package:music_app/bottombar_profile.dart';
 import 'package:music_app/bottombar_search.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const SignUpScreen(),
       routes: <String, WidgetBuilder>{
+        "/anime1":(context)=> anime(),
         "/settingsmain":(context)=> SettingsMain(),
         "/signupscreen": (context) => SignUpScreen(),
         "/loginscreen": (context) => LoginScreen(),
