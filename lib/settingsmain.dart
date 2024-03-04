@@ -61,7 +61,7 @@ class _SettingsMainState extends State<SettingsMain> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/user.png'), // Replace with your image path
+                      image: AssetImage('assets/icons/user.png'), // Replace with your image path
                       fit: BoxFit.cover,
                     ),
                   ),
