@@ -54,7 +54,7 @@ class _BottombarMusicState extends State<BottombarMusic> {
               routeName = "/profile";
               break;
             default:
-              routeName = "/homebottom";
+              routeName = "";
           }
           Navigator.pushNamed(context, routeName);
         },
