@@ -456,7 +456,7 @@ class _HomepageState extends State<Homepage> {
               routeName = "/profile";
               break;
             default:
-              routeName = "/homebottom";
+              routeName = "";
           }
           Navigator.pushNamed(context, routeName);
         },
