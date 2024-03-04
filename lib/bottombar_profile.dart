@@ -234,7 +234,7 @@ class _BottombarProfileState extends State<BottombarProfile> {
               routeName = "/profile";
               break;
             default:
-              routeName = "/homebottom";
+              routeName = "";
           }
           Navigator.pushNamed(context, routeName);
         },
