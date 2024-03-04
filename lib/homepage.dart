@@ -460,7 +460,8 @@ class _HomepageState extends State<Homepage> {
           }
           Navigator.pushNamed(context, routeName);
         },
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
+        backgroundColor: Colors.black,
         selectedItemColor: Colors.amber,
         items: [
           BottomNavigationBarItem(
