@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 validator: (value) {
                                   if (value == null ||
                                       value.isEmpty ||
-                                      !value.contains('@')) {
+                                      !value.contains('@gmail.com')) {
                                     return 'Please enter a valid email';
                                   }
                                   return null;
@@ -128,7 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ),
                                 validator: (value) {
-                                  if (value == null || value.isEmpty) {
+                                  if (value == null || value.isEmpty
+
+                                  ) {
                                     return 'Please enter your password';
                                   }
                                   return null;
