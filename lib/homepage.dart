@@ -181,14 +181,14 @@ class _HomepageState extends State<Homepage> {
                           height: 120,
                           width: 120,
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
-                            child: const Image(
-                              fit: BoxFit.fill,
-                              image: AssetImage('assets/images/Cool.png'),
-                              width: 100.0,
-                              height: 100.0,
-                            ),
-                          ),
+                              borderRadius: BorderRadius.circular(10.0),
+                              child: const Image(
+                                fit: BoxFit.fill,
+                                image: AssetImage('assets/images/Cool.png'),
+                                width: 100.0,
+                                height: 100.0,
+                              ),
+                              ),
                         ),
                       ),
                       SizedBox(
