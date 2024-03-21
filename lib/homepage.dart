@@ -453,7 +453,7 @@ class _HomepageState extends State<Homepage> {
               routeName = "/playlist";
               break;
             case 3:
-              routeName = "/profile";
+              routeName = "/settingsmain";
               break;
             default:
               routeName = "";
@@ -480,8 +480,8 @@ class _HomepageState extends State<Homepage> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
             backgroundColor: Colors.black,
           ),
         ],
