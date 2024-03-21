@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/Songs/alone.dart';
+import 'package:music_app/Songs/song.dart';
 import 'package:music_app/bottombar_home.dart';
 import 'package:music_app/bottombar_music.dart';
 import 'package:music_app/bottombar_profile.dart';
+import 'package:music_app/home_screen.dart';
 
 class BottombarSearch extends StatefulWidget {
   const BottombarSearch({Key? key}) : super(key: key);
@@ -62,7 +65,7 @@ class _BottombarSearchState extends State<BottombarSearch> {
               routeName = "/playlist";
               break;
             case 3:
-              routeName = "/profile";
+              routeName = "/settingsmain";
               break;
             default:
               routeName = "";
@@ -89,8 +92,8 @@ class _BottombarSearchState extends State<BottombarSearch> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
             backgroundColor: Colors.black,
           ),
         ],
@@ -124,7 +127,13 @@ class CustomSearchDelegate extends SearchDelegate {
       IconButton(
         icon: const Icon(Icons.clear),
         onPressed: () {
-          query = '';
+          Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => Song(),
+                                          // builder: (context) => Alone(),
+                                        ),
+                                      );
         },
       )
     ];

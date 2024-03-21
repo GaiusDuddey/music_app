@@ -51,7 +51,7 @@ class _BottombarMusicState extends State<BottombarMusic> {
               routeName = "/playlist";
               break;
             case 3:
-              routeName = "/profile";
+              routeName = "/settingsmain";
               break;
             default:
               routeName = "";
@@ -78,8 +78,8 @@ class _BottombarMusicState extends State<BottombarMusic> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
             backgroundColor: Colors.black,
           ),
         ],
