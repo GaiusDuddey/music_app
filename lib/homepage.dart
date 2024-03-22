@@ -181,14 +181,14 @@ class _HomepageState extends State<Homepage> {
                           height: 120,
                           width: 120,
                           child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: const Image(
-                                fit: BoxFit.fill,
-                                image: AssetImage('assets/images/Cool.png'),
-                                width: 100.0,
-                                height: 100.0,
-                              ),
-                              ),
+                            borderRadius: BorderRadius.circular(10.0),
+                            child: const Image(
+                              fit: BoxFit.fill,
+                              image: AssetImage('assets/images/Cool.png'),
+                              width: 100.0,
+                              height: 100.0,
+                            ),
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -453,10 +453,10 @@ class _HomepageState extends State<Homepage> {
               routeName = "/playlist";
               break;
             case 3:
-              routeName = "/settingsmain";
+              routeName = "/profile";
               break;
             default:
-              routeName = "";
+              routeName = "/homepage";
           }
           Navigator.pushNamed(context, routeName);
         },
@@ -480,8 +480,8 @@ class _HomepageState extends State<Homepage> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.person),
+            label: 'Profile',
             backgroundColor: Colors.black,
           ),
         ],
